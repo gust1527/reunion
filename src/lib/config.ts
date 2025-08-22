@@ -1,24 +1,57 @@
 /**
  * Configuration constants for the reunion application
- * Uses environment variables with fallback defaults
+ * Uses date-based logic for feature toggles
  */
 
 import { browser } from '$app/environment';
 
 /**
+ * Date utilities for Danish timezone
+ */
+const danishTimeZone = 'Europe/Copenhagen';
+
+/**
+ * Get current time in Danish timezone
+ */
+function getCurrentDanishTime(): Date {
+	if (browser) {
+		// Client-side: Use browser's timezone conversion
+		return new Date();
+	} else {
+		// Server-side: Use Danish timezone
+		return new Date(new Date().toLocaleString('en-US', { timeZone: danishTimeZone }));
+	}
+}
+
+/**
+ * Check if a specific date/time has passed
+ */
+function hasDatePassed(targetDate: Date): boolean {
+	const now = getCurrentDanishTime();
+	return now >= targetDate;
+}
+
+/**
  * Client-side configuration
- * Uses VITE_ prefixed environment variables for browser access
+ * Uses date-based logic for feature toggles
  */
 export const config = {
 	/**
 	 * Whether to show the photos link on the main page
-	 * Can be controlled via VITE_REUNION_SHOW_PHOTOS_LINK environment variable
-	 * Defaults to true in development, false in production for safety
+	 * Shows after August 23, 2025 at 14:30 Danish time
+	 * This corresponds to the "Vi drager mod Rosborg" activity time
 	 */
-	showPhotosLink: browser 
-		? (import.meta.env.VITE_REUNION_SHOW_PHOTOS_LINK === 'true' || 
-		   import.meta.env.DEV) // Show in development by default
-		: true, // Server-side default
+	get showPhotosLink(): boolean {
+		// Target date: August 23, 2025 at 14:30 Danish time
+		const targetDate = new Date('2025-08-23T14:30:00+02:00'); // Danish summer time (CEST)
+		
+		// For development, always show the link
+		if (browser && import.meta.env.DEV) {
+			return true;
+		}
+		
+		return hasDatePassed(targetDate);
+	},
 
 	/**
 	 * Application version for health checks and debugging
@@ -28,7 +61,12 @@ export const config = {
 	/**
 	 * Contact email for photo submissions
 	 */
-	contactEmail: 'festudvalget@reunion2025.dk'
+	contactEmail: 'festudvalget@reunion2025.dk',
+
+	/**
+	 * Target date for photos feature (for debugging)
+	 */
+	targetDate: new Date('2025-08-23T14:30:00+02:00')
 } as const;
 
 /**

@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { config } from '$lib/config';
 	
-	// Check if photos link should be shown (controlled via environment variable)
+	// Check if photos link should be shown (controlled via date logic)
 	const showPhotosLink = config.showPhotosLink;
+	
+
 </script>
 
 <div class="bg-[#fdfaf6] text-gray-900 flex items-center justify-center min-h-screen p-4">
@@ -113,3 +115,4 @@
 		<div class="absolute bottom-0 left-0 w-full h-4 bg-[#801e32] rounded-b-2xl"></div>
 	</div>
 </div>
+
