@@ -8,6 +8,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>8.Z Reunion 2025</title>
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="icon" type="image/png" href="/hue-cap.png" />
 	<style>
 		body {

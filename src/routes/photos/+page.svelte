@@ -20,7 +20,7 @@
 			</a>
 			
 			<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#801e32] mb-4">
-				📸 Vores Billeder
+				Vores Billeder
 			</h1>
 			
 			<p class="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
