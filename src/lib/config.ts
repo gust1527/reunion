@@ -45,8 +45,8 @@ export const config = {
 		// Target date: August 23, 2025 at 14:30 Danish time
 		const targetDate = new Date('2025-08-23T14:30:00+02:00'); // Danish summer time (CEST)
 		
-		// For development, always show the link
-		if (browser && import.meta.env.DEV) {
+		// For development, always show the link (both client and server)
+		if (import.meta.env.DEV) {
 			return true;
 		}
 		

@@ -69,6 +69,8 @@
 				<p><strong>Kl. 14:30</strong> – Vi drager mod Rosborg</p>
 				<p class="text-gray-600 ml-4">Jagt efter årgangsbilledet + 2 hemmelige aktiviteter</p>
 				
+
+				
 				{#if showPhotosLink}
 					<div class="mt-3 ml-4">
 						<a 
