@@ -60,25 +60,12 @@
 
 		<!-- Bottom Section -->
 		<div class="mt-12 lg:mt-16 text-center">
-			<div class="bg-white rounded-xl shadow-md p-6 sm:p-8 max-w-2xl mx-auto">
-				<h3 class="text-xl sm:text-2xl font-bold text-[#801e32] mb-4">
-					Mangler der en kategori?
-				</h3>
-				<p class="text-gray-700 text-sm sm:text-base mb-6">
-					Hvis I har billeder fra andre begivenheder eller aktiviteter, så send dem til 
-					<a href="mailto:festudvalget@reunion2025.dk" class="text-[#801e32] font-medium hover:underline">
-						festudvalget@reunion2025.dk
-					</a>
-					så opretter vi en ny kategori!
-				</p>
-				
-				<a 
-					href="/"
-					class="inline-flex items-center px-6 py-3 bg-[#801e32] text-white font-medium rounded-lg hover:bg-[#6a1929] transition-colors duration-200 shadow-md hover:shadow-lg"
-				>
-					← Tilbage til reunion siden
-				</a>
-			</div>
+			<a 
+				href="/"
+				class="inline-flex items-center px-6 py-3 bg-[#801e32] text-white font-medium rounded-lg hover:bg-[#6a1929] transition-colors duration-200 shadow-md hover:shadow-lg"
+			>
+				← Tilbage til reunion siden
+			</a>
 		</div>
 	</div>
 </div>

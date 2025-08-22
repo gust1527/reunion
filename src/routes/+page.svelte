@@ -7,7 +7,7 @@
 </script>
 
 <div class="bg-[#fdfaf6] text-gray-900 flex items-center justify-center min-h-screen p-4">
-	<div class="max-w-xl w-full bg-white rounded-2xl shadow-xl p-8 relative">
+	<div class="max-w-xl w-full bg-white rounded-2xl shadow-xl p-6 relative">
 		<!-- Top caps -->
 		<div class="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 w-20 sm:w-24 md:w-28">
 			<img src="/hue-cap.png" alt="Studenterhue" />
