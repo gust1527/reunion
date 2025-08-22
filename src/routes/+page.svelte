@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { config } from '$lib/config';
 	
-	// Check if photos link should be shown (can be controlled via environment variable)
-	// For now, default to true. In production, this could be controlled by env vars
-	const showPhotosLink = true; // TODO: Connect to environment variable when needed
+	// Check if photos link should be shown (controlled via environment variable)
+	const showPhotosLink = config.showPhotosLink;
 </script>
 
 <div class="bg-[#fdfaf6] text-gray-900 flex items-center justify-center min-h-screen p-4">

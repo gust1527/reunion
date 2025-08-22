@@ -9,6 +9,7 @@ export default defineConfig({
 	},
 	envDir: '.',
 	envPrefix: [
-		'REUNION_'
+		'REUNION_',
+		'VITE_'
 	]
 });

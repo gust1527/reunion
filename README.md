@@ -28,7 +28,25 @@ pnpm preview
 
 ## Environment Variables
 
-- `REUNION_SHOW_PHOTOS_LINK`: Set to 'true' to show the photos link on the main page
+### Client-Side Variables (VITE_ prefix)
+- `VITE_REUNION_SHOW_PHOTOS_LINK`: Set to 'true' to show the photos link on the main page
+  - **Default**: `true` in development, configurable in production
+  - **Example**: `VITE_REUNION_SHOW_PHOTOS_LINK=false` to hide photos link
+
+### Server-Side Variables (REUNION_ prefix)
+- `REUNION_API_KEY`: API key for server-side operations (if needed)
+- `REUNION_DATABASE_URL`: Database connection string (if needed)
+
+### Environment Setup Example
+Create a `.env` file in the project root:
+```bash
+# Photos Feature Toggle
+VITE_REUNION_SHOW_PHOTOS_LINK=true
+
+# Server settings
+NODE_ENV=production
+PORT=3000
+```
 
 ## Photo Management
 
