@@ -51,7 +51,17 @@
 		<!-- Title - responsive text sizing -->
 		<h3 class="font-semibold text-gray-900 text-sm sm:text-base lg:text-lg leading-tight line-clamp-2 group-hover:text-[#801e32] transition-colors duration-200">
 			{photo.title}
+			{#if photo.year}
+				<span class="text-xs text-gray-500 font-normal">({photo.year})</span>
+			{/if}
 		</h3>
+
+		<!-- Description -->
+		{#if photo.description}
+			<p class="text-xs sm:text-sm text-gray-600 line-clamp-2">
+				{photo.description}
+			</p>
+		{/if}
 
 		<!-- Upload button -->
 		<button
