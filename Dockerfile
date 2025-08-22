@@ -22,6 +22,9 @@ RUN pnpm run build
 FROM node:20-alpine
 WORKDIR /app
 
+# Install curl for health checks
+RUN apk add --no-cache curl
+
 # Copy built assets and package files
 COPY --from=builder /app/build build/
 COPY --from=builder /app/package.json ./
