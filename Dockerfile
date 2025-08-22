@@ -2,22 +2,27 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Copy project files
-COPY package.json pnpm-lock.yaml svelte.config.js tsconfig.json ./
+# Copy package files first for better caching
+COPY package.json pnpm-lock.yaml ./
+
+# Install pnpm and dependencies
+RUN npm install -g pnpm && \
+    pnpm install --frozen-lockfile
+
+# Copy source files
+COPY svelte.config.js tsconfig.json ./
 COPY src ./src
 COPY static ./static
 COPY vite.config.* ./
 
-# Install dependencies and build
-RUN npm install -g pnpm && \
-    pnpm install && \
-    pnpm run build
+# Build the application
+RUN pnpm run build
 
 # Stage 2: Run
 FROM node:20-alpine
 WORKDIR /app
 
-# Copy built assets
+# Copy built assets and package files
 COPY --from=builder /app/build build/
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/node_modules ./node_modules
@@ -32,7 +37,7 @@ ENV HOST=0.0.0.0
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD node -e "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })" || exit 1
+    CMD curl -f http://localhost:3000/health || exit 1
 
 # Start the server
 CMD ["node", "build"]
