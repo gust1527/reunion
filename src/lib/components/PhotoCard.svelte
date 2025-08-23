@@ -17,21 +17,41 @@
 	function openUploadLink() {
 		window.open(photo.uploadLink, '_blank', 'noopener,noreferrer');
 	}
+
+	// Check if the thumbnail is a video file
+	const isVideo = $derived(photo.thumbnail.toLowerCase().endsWith('.mp4') || 
+				 photo.thumbnail.toLowerCase().endsWith('.webm') || 
+				 photo.thumbnail.toLowerCase().endsWith('.ogg') ||
+				 photo.thumbnail.toLowerCase().endsWith('.mov'));
 </script>
 
 <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-	<!-- Image Container -->
+	<!-- Image/Video Container -->
 	<div class="relative aspect-square overflow-hidden bg-gray-100">
 		{#if !imageError}
-			<img
-				src={photo.thumbnail}
-				alt={photo.title}
-				class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-				onerror={handleImageError}
-				loading="lazy"
-			/>
+			{#if isVideo}
+				<video
+					src={photo.thumbnail}
+					class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					preload="metadata"
+					muted
+					loop
+					autoplay
+					onerror={handleImageError}
+				>
+					<track kind="captions" />
+				</video>
+			{:else}
+				<img
+					src={photo.thumbnail}
+					alt={photo.title}
+					class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+					onerror={handleImageError}
+					loading="lazy"
+				/>
+			{/if}
 		{:else}
-			<!-- Fallback when image fails to load -->
+			<!-- Fallback when image/video fails to load -->
 			<div class="w-full h-full flex items-center justify-center bg-gray-200">
 				<div class="text-center text-gray-500">
 					<svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

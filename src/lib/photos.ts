@@ -39,10 +39,10 @@ export const photos: Photo[] = [
 	},
 	{
 		id: "03-venner-til-fest",
-		title: "Venner til fest",
+		title: "Eske og Ørnen til Bacchus",
 		thumbnail: "/images/03-venner-til-fest.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1QGOsfH9rWCen1LOp-jzDLZD1XsX8CpFX?usp=sharing",
-		description: "To personer står tæt og smiler til kameraet til en fest.",
+		description: "Højt humør og røde kinder.",
 		year: 2018
 	},
 	{
@@ -50,7 +50,7 @@ export const photos: Photo[] = [
 		title: "Gruppearbejde",
 		thumbnail: "/images/04-gruppearbejde.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1MrW4dPave38dhG_kOFCMf_XH-woLzB9K?usp=sharing",
-		description: "Flere personer sidder samlet om borde med papir og computere.",
+		description: "Kogeren kemi-time?.",
 		year: 2018
 	},
 	{
@@ -58,7 +58,7 @@ export const photos: Photo[] = [
 		title: "T-shirt posering",
 		thumbnail: "/images/05-t-shirt-posering.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1GAwTZ1zQkPqrWbu3Hm_ixYpDWOUc1UvB?usp=sharing",
-		description: "En person står og poserer i en t-shirt.",
+		description: "Frede står og poserer i et unavngivet lokale.",
 		year: 2018
 	},
 	{
@@ -66,7 +66,7 @@ export const photos: Photo[] = [
 		title: "Afslapning på bænk",
 		thumbnail: "/images/06-afslapning-paa-baenk.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1hieG7Ipnv5G02ihGfmuFBkWxXsSEsFzK?usp=sharing",
-		description: "En person ligger afslappet hen over en træbænk.",
+		description: "Vangsted ligger afslappet hen over en træbænk.",
 		year: 2018
 	},
 	{
@@ -74,63 +74,71 @@ export const photos: Photo[] = [
 		title: "Balance på sten",
 		thumbnail: "/images/07-balance-paa-sten.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1scp9aS8x6NZrMk_bYbt_gEpZZ_gAw0p3?usp=sharing",
-		description: "En person sidder på store sten udenfor og laver håndtegn.",
+		description: "Sidder på en stor sten udenfor og laver håndtegn.",
 		year: 2018
 	},
 	{
 		id: "08-udklaedte-i-klassen",
-		title: "Udklædte i klassen",
+		title: "Pust ikke sug!",
 		thumbnail: "/images/08-udklaedte-i-klassen.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1zoWLWXPEGXkHp2SQkMYcta9XzeeKww5t?usp=sharing",
-		description: "Flere personer i udklædning sidder sammen i et klasselokale.",
+		description: "Eske får lige smagt på de gode sager.",
 		year: 2018
 	},
 	{
 		id: "09-laboratorie-notater",
-		title: "Laboratorie – notater",
+		title: "Stabil fremviser sit seneste projekt",
 		thumbnail: "/images/09-laboratorie-notater.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1IKX16Co2gBdM_XJ8T3xgLMsNO_DjgyGq?usp=sharing",
-		description: "En person i kittel holder papir i et laboratorium.",
+		description: "Hvad er det for noget?",
 		year: 2019
 	},
 	{
 		id: "10-laboratorie-pipette",
-		title: "Laboratorie – pipette",
+		title: "Jules og Stabil sidder og funderer over tilværelsen",
 		thumbnail: "/images/10-laboratorie-pipette.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1Ty1RWwXvCPsdzgoH8P0tcmczZcTItI4j?usp=sharing",
-		description: "En person i kittel arbejder med pipette i laboratoriet.",
+		description: "",
 		year: 2019
 	},
 	{
 		id: "11-laboratorie-forsoegsudstyr",
-		title: "Laboratorie – forsøgsudstyr",
+		title: "Holmes og Stein laver forsøg i GV",
 		thumbnail: "/images/11-laboratorie-forsoegsudstyr.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1xoece7j4xQQfukhCVElcR1HrmsfjFq1j?usp=sharing",
-		description: "En person viser et glas dækket med sølvfolie i laboratoriet.",
+		description: "Steneren.",
 		year: 2019
 	},
 	{
 		id: "12-gruppe-ved-computer",
-		title: "Gruppe ved computer",
+		title: "Jules med en tang?",
 		thumbnail: "/images/12-gruppe-ved-computer.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1a5H6JpdgisPGe_AUKPv__855aEr4RqzO?usp=sharing",
-		description: "Flere personer sidder samlet omkring en computer.",
+		description: "",
 		year: 2019
 	},
 	{
 		id: "13-selfie-i-spejl",
-		title: "Selfie i spejl",
+		title: "Ingen solblindhed til de her gutter",
 		thumbnail: "/images/13-selfie-i-spejl.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/13sNvit5OsWaCDKQ_1MQaMxmbSNBWc4sx?usp=sharing",
-		description: "En person tager et selfie i et spejl.",
+		description: "Solformørkelsen kan bare komme an",
 		year: 2019
 	},
 	{
 		id: "14-laboratorie-samarbejde",
-		title: "Laboratorie – samarbejde",
+		title: "Mathias med endnu en tang?",
 		thumbnail: "/images/14-laboratorie-samarbejde.jpg",
 		uploadLink: "https://drive.google.com/drive/folders/1MMJxWv3YhyrPST1WAym8F4B8A2K-OcJA?usp=sharing",
-		description: "To personer i kittel arbejder sammen i laboratoriet.",
+		description: "",
+		year: 2019
+	},
+	{
+		id: "15-stabil-special-video",
+		title: "En Stabil Special",
+		thumbnail: "/images/stabil_special.mp4",
+		uploadLink: "https://drive.google.com/drive/folders/1nEZ8jR_ecp3PVlNwB7WagPb1vn1EE82R?usp=sharing",
+		description: "God power rangers parodi",
 		year: 2019
 	},
 ];
